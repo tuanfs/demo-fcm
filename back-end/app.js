@@ -1,7 +1,7 @@
 const express = require("express");
 const admin = require("firebase-admin");
 const bodyParser = require("body-parser");
-const {getMessaging} = require("firebase-admin/messaging");
+const cors = require("cors");
 
 admin.initializeApp({
   credential: admin.credential.cert({
@@ -29,15 +29,15 @@ const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
+app.use(cors());
 app.use(express.json());
 
 app.post("/registration", (req, res) => {
+  const deviceToken = req.body.deviceToken;
+  console.log(deviceToken);
   admin
     .messaging()
-    .subscribeToTopic(
-      "cg3kcO0Olw-71T4QRf-AeD:APA91bHfG9VhN_O8M7rfbfxjFHOLQvBttpQfFXZHC8Y0MN4yPdlICD3SV24Z3U_Ufd_-jHUQFvPeEGFbInVnjX3aP-hp7J8rx07bsSOuvIa2iNOwNv2vOJogeeHetDXajOaCaYI8p5y0",
-      "MessagingTopicManagementResponse",
-    )
+    .subscribeToTopic(deviceToken, "MessagingTopicManagementResponse")
     .then((response) => {
       res.status(200).send("subscribing successfully");
     })
@@ -69,15 +69,13 @@ app.post("/send-notification", (req, res) => {
 });
 
 app.post("/send-topic", (req, res) => {
-  const topic = "MessagingTopicManagementResponse";
+  const topic = "MessagingTopicManagementResponse2";
+  const { title, body, data } = req.body;
   const message = {
-    data: {
-      score: "850",
-      time: "2:45",
-    },
+    data,
     notification: {
-      title: req.body.title,
-      body: req.body.body,
+      title,
+      body,
     },
     topic: topic,
   };
@@ -93,6 +91,14 @@ app.post("/send-topic", (req, res) => {
       res.status(400).send("Error Sending message to topic");
       console.log("Error subscribing to topic:", error);
     });
+});
+
+app.post("/login", (req, res) => {
+  if (req.body.username) {
+    res.status(200).send("Login successful");
+  } else {
+    res.status(400).send("Login failed");
+  }
 });
 
 app.listen(port, () => {
