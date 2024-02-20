@@ -34,10 +34,11 @@ app.use(express.json());
 
 app.post("/registration", (req, res) => {
   const deviceToken = req.body.deviceToken;
+  const topic = req.body.topic;
   console.log(deviceToken);
   admin
     .messaging()
-    .subscribeToTopic(deviceToken, "MessagingTopicManagementResponse")
+    .subscribeToTopic(deviceToken, topic)
     .then((response) => {
       res.status(200).send("subscribing successfully");
     })
@@ -69,8 +70,8 @@ app.post("/send-notification", (req, res) => {
 });
 
 app.post("/send-topic", (req, res) => {
-  const topic = "MessagingTopicManagementResponse2";
-  const { title, body, data } = req.body;
+  const { title, body, data, topic } = req.body;
+  console.log("topic", topic);
   const message = {
     data,
     notification: {
