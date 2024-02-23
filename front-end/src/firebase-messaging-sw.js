@@ -1,12 +1,12 @@
 if ("serviceWorker" in navigator) {
   const firebaseConfigParams = new URLSearchParams({
-    apiKey: "AIzaSyBMC52j8b0ufGOQqb-qS06K_SJR--n7jOk",
-    authDomain: "notify-test-931fc.firebaseapp.com",
-    projectId: "notify-test-931fc",
-    storageBucket: "notify-test-931fc.appspot.com",
-    messagingSenderId: "69395418565",
-    appId: "1:69395418565:web:f3ebf282c9c452753a4fac",
-    measurementId: "G-FLXNSDQ5C7",
+    apiKey: "AIzaSyDyfVwslvnl31eHtuE1a_3me4MFamrik4Q",
+    authDomain: "careful-voyage-403108.firebaseapp.com",
+    projectId: "careful-voyage-403108",
+    storageBucket: "careful-voyage-403108.appspot.com",
+    messagingSenderId: "949691183765",
+    appId: "1:949691183765:web:55127a5d89655fd615a19c",
+    measurementId: "G-ZX069KVGKV"
   }).toString();
   navigator.serviceWorker
     .register(`../firebase-messaging-sw.js?${firebaseConfigParams}`)
