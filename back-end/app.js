@@ -6,18 +6,18 @@ const cors = require("cors");
 admin.initializeApp({
   credential: admin.credential.cert({
     type: "service_account",
-    project_id: "notify-test-931fc",
-    private_key_id: "5d9f27e109adad90f1e587b92b07402841f0bd45",
+    project_id: "careful-voyage-403108",
+    private_key_id: "2167e0f371a8883a064681cd8dd31ae8ef0e093f",
     private_key:
-      "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDg+XWwyn3byoe4\naJA3O2k6ghrqkB872a2+CxJkFxWg36sVlVUYQcbSxwLqao5nuxu8rPEA6o0FYe+d\nUdecqRyFRiZMnUN73OqEg4yQXwqJ8lBa9onANEDD49Xdq6U2L0TW8QlpVfjiPzET\nkTqoY2NfHuZnn+iiVeXJKQjcqdtyWK7YszCeJ/keHkyxBVxij3YIrBYHE8m2a3m8\nHrD+fpEeCQyuhFrq8gMGS110fHzMnLxk/TDv0+h591yf6jiWPJoGK/gNWPo0zU39\nn0V5PETQ6E+rotc2d9opQrsd8E1fonOhwyMYJGy3bfBEVkztrOBZF/n1am/Kuaqq\nxBuHGVlxAgMBAAECggEAJmqSrUC2oyx/Zn78eWH8ww/qdrlri/XM1FHhrxO+Dr2C\n4mmgoUbCI8X1+n99l7r8rog9kzF6KTwjBZMvJUI/a4aiDZ0hI+qCZWRtQU3pZ8rn\n69CDjz2c/ZZPM84WpR0HPUjlmYYjvMabo8K96HkoQ9rr7zAAMpBGb8ZBDCU5Itot\n8ctPTh1+I2lQ0gEkWZPYMoPQ7/hJtSIOL3geiw1pvSgeOGOM7canWLBjY6KPIC7L\nnVlOx13IKg4C6rGZNJ35wDSp4MWxOh9dhTJAlmTE+Zk+bPrzcDonF/lQ1GQ/cKn8\nP0qF7hYkEfOGzfUd3HukpSEkvN9l4Y9vPtaMmycs/QKBgQDy2mrq/zqq57yiUazP\nFQjFyaFJsL3/K/tWkYqXIBLJtsgaAj0jj/GRHVKfNJfRoQciuzKgSePD4RUkRWBY\nGEmQW5LY5qEEm6Jy5+s0uU+C3MzZg+KG2m9mGrZh9O4Nv6ZWn+odfSR0u7zrWUWw\nObFbeeqiK79GXXaPz/0489kGjwKBgQDtJ0T5wX8bunRTnwJlBoQb0lZeW0tAwHm3\nBY8XTYdHsvmXLqDP+TfqUaf3x+9nGT1xTrm/pFjJTgIQQnY0zmYAcYOjwC1s2kfN\nL72tl6fe+WLybtEeKqGY/3bCHqrSdwckLw4WitNELe9zvTOGOb89NT1b2/dGOmE2\nqj1ewBef/wKBgQCCSs7cH20Bbm0VBQ7a12UqgH/pAksdUSJ6koExjYKm+EqpMZRN\ntRecjIfcZKIjVOp4JskFmD77w5HNMO98tCMbsRW7CxlOWJWyYl0dn2JaSk4ZURnC\n0gS8Wg6JxZfGhpEenpNDmPVrL6Iu/mlWH83YzzMkKKZpgRFwHN21pZZFXwKBgQDZ\nHQ2B1gsneJENCVMo6ElEK1HU+qGve0czLsysmdbS5mCobxDcth3h0LYFG67qZWoh\n9OALOkvqqBctiZsshxVNLJ9G6CbuM/xuNlnhtikC8rAKoTej9YWSS7cOywK6wivw\njX/JVXlLPv6sqDeml/Gj+Lze/0enrMTZRgv/Vb+LQwKBgQDICPVNHqp/FFQfApvF\nQ4sU2XtOp/+GvWJaRqCnRcVcJY8I6y6mDJ3yAq7s/9P+WebqCk9iMEGcEQChU8K4\n4pwalgPDgwCktX0HcWrqTjr1zdzpap+rWlrC9jZRuRpXhhweaKM85Wv3zGVSxcwl\nA+LDfxSu4paekFgX85G5GQx7vw==\n-----END PRIVATE KEY-----\n",
+      "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDa+X6bkssJ6i6\nZd08L624JOlsnCgTcDspvWC6l+/oxvRdKD36aGXQ4mRtkczcxcDGGfKJ1qxNFGwv\nRzVoSada22i7Y0rM90NiVM3MGPjeCAHYLyv7faR/a2csWvJ1XHeZhEmS47sJ/EU9\nTgco0EPYW8RASBSA8nEg2j9wtRb/WnfBYVu5b6iJkVHbxyraKTmwI3BQ4XOPGakU\nKLV+uv9OOwFO1TFXAjlNnPdRtm8Poh6WIP5zbvMz1Hr+k28s1I811IC1xqa2kVwj\ncyBtwGcLDaxXbLIxyETLw3TglfhBPOcKzdiS3AYjEiHgLUUJXiM268YaSqKEBys+\n0IJ5T+QFAgMBAAECggEAGZn2WlFeOEXm0SqcqfCeG9h8Gx43EtraaVy1wiQ7Ch4c\nb+LggcBxDEVIfmFCOy8OEvXdxCiTUJLLHIOB7+xsSBcj+J6os0L2eTiecG1aFy5p\n3XJKmwsqBIZj0RgGGRF42qwNvnhmrcd2o7In9nUYWk0lX/2BcCYy42isNH4I6gFr\nfv2tDJ/0vHQ9hLDe7sR3NdQVYJn1OlLPORRNyGo8c3rblH16nQ+Gwl8T2UQxrrKn\nmc88dp+n9Bm7yESlZxLGlWU91ELQcdWgcdVwku50czEm8RDO6tY6iSwVBf2nmiXo\nKeFkPwNaQIernN+YG0/2eXrpJBxQBNl8jlQUmzpq4QKBgQD1wgGUKgQHEl8C4phN\nZBxPpN/njq9TyNCCJH/LhbUH1KiiY4uVwZsRXUSOo6KhxuLsasTHP6PklWt/KOzd\nxwcIXCqYUXiVN/W9fu3B92oX6FrE49kn1hy79JIs9/rI8Jq0P9DbkR5eV2j1u+zr\ngkreZpAxrnceHwLuB1J4vzEfIQKBgQDLkNpVQX5zBWa2YVgVS+hI708oGgxw0sFq\nvjUxAT6nC4Ixf2alccCzjUTR8/lmja5J0pmusKe24ey9jBCXcaZT7OiCTmpE2YKH\nJ9Z7JHd4D+79D+vE3ov4QRN5HoCV3lKut9RKv+b9FStL3YyouVZCOp72VOYB2Boa\n6wIPvaccZQKBgQCU3Sm7qB+8cOJgiwWai3OiwspmJ0YIyHGVA6rti1Z3IdfsVcQt\nuJLH1+k5ReGzgRfgAWSlFOWgBuqQoieox3B5HesnTOJv8O/IE2TNw6LeTH7/GM1n\nlgjdyW3qE2Qz55quaKGI/sSYfPY1M9p1Zf0X7qSVk4rQEhTiPkk0nwuQQQKBgQCH\nG1/dn/d2DcqrF5ano9bKuZJW8lr5ctgOqamSGdpkcj357i3JduNICGX51yzbhQN9\nWbrId9UIi5BeCZ1ldnfHUgDLo5Himl6Ip8cxufVVCXY8HZoE8xQBM+fhxn3fekx0\nS+wppI6BwNAYrTXTMhdvI4snwRdbd/tzjDC1E9HbBQKBgFVsA8rw+Jp9AeaY8mDc\nP2vQjbKCIrlm2h0OGegWxwKlvTneCx9YGH8jwaLF4yZZE6CMfPtTtrNQ8opHicyw\nD0BXLPjSgLXLssmGfdJ+wIbOYs/HkLlUQBrLcHsY2UJPrU7d8OST1wbua+1GmHab\nW3uh4gT4LjYXzhJqtZBpRRqJ\n-----END PRIVATE KEY-----\n",
     client_email:
-      "firebase-adminsdk-yez98@notify-test-931fc.iam.gserviceaccount.com",
-    client_id: "109928503893014455028",
+      "firebase-adminsdk-22gbc@careful-voyage-403108.iam.gserviceaccount.com",
+    client_id: "107196506973560046813",
     auth_uri: "https://accounts.google.com/o/oauth2/auth",
     token_uri: "https://oauth2.googleapis.com/token",
     auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
     client_x509_cert_url:
-      "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-yez98%40notify-test-931fc.iam.gserviceaccount.com",
+      "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-22gbc%40careful-voyage-403108.iam.gserviceaccount.com",
     universe_domain: "googleapis.com",
   }),
   // Add your Firebase project configuration here
@@ -31,6 +31,22 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
+
+app.post("/unsubcribe", (req, res) => {
+  const deviceToken = req.body.deviceToken;
+  const topic = req.body.topic;
+  console.log(deviceToken);
+  admin
+    .messaging()
+    .unsubscribeFromTopic(deviceToken, topic)
+    .then((response) => {
+      res.status(200).send("Unsubscribing successfully");
+    })
+    .catch((error) => {
+      res.status(400).send("Error unsubscribing to topic");
+      console.log("Error subscribing to topic:", error);
+    });
+});
 
 app.post("/registration", (req, res) => {
   const deviceToken = req.body.deviceToken;

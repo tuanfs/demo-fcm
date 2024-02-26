@@ -54,6 +54,7 @@ function App() {
         value={topic}
         onChange={(event) => {
           setTopic(event.target.value);
+          setIsSuccess(false);
         }}
       />
       <br />
